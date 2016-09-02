@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+html, body{
+    font-family: "Times New Roman";
+	height:100%;
+}
+.main{
+	width:80%;
+	margin:0 auto;
+}
+.header {
+   background-color: lightblue;
+}
+h1{
+	font-family:Impact, Charcoal, sans-serif;
+	color:#2f4f4f;
+	font-size:24px;
+	font-weight:normal;
+}
+.impact_txt{
+	font-family:Impact, Charcoal, sans-serif;
+	color:#2f4f4f;
+	font-size:16px;
+	margin-bottom:2px;	
+}
+.nav_icons{
+	display:block;
+	text-align:center;
+	padding:12px 0;
+}
+.nav_icons:hover{
+	background-color:#ddd;
+}
+.case_block{
+	width:95%;
+	border:1px solid darkgrey;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+[class*="col-"] {
+    float: left;  
+	padding:10px;
+}
+table, th, td {
+	border-collapse: collapse;
+	padding:5px;
+	text-align:center;
+}
+tr:nth-child(even) {background: #ddd}
+tr:nth-child(odd) {background: #fff}
