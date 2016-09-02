@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Case Monitoring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="header col-12">
+			<h1>Automated Analysis & Risk Management Platform</h1>
+		</div>
+	</div>
+	<div class="row" style="background-color:#f6f6f6;height:100vh;">	
+		<div class="col-2">		
+			<a href="case_monitoring.html" class="nav_icons">
+				<img src="images/case.jpg" width="100px" height="100px;"><br>
+				<span class="impact_txt">Case Monitoring</span>
+			</a>		
+			<a href="agent_at_work.html" class="nav_icons">
+				<img src="images/agent.png" width="100px" height="100px;"><br>
+				<span class="impact_txt">Agent at Work</span>
+			</a>		
+			<a href="analytics.html" class="nav_icons">
+				<img src="images/analytics.png" width="100px" height="100px;"><br>
+				<span class="impact_txt">Analytics</span>
+			</a>			
+		</div>
+		<div class="col-10" style="border:8px solid silver;border-radius:5px;margin-top:10px;background-color:white;">
+			<div class="col-3">
+				<div class="case_block1">
+					<!--<p style="background-color:grey;color:white;text-align:center;padding:3px;font-size:12px;margin:0;">SWISS-TYPE 01</p>
+					<p style="text-align:center;font-size:12px;">PRODUCING<br>Current Part<br><br><span style="font-size:14px;">8000</span></p>
+					<p style="padding:10px 0;text-align:center;font-size:12px;background-color:green;color:white;">Production efficiency<br><br><span style="font-size:18px;">81%</span></p>
+					<p style="text-align:center;font-size:12px;">Part Count<br><br><span style="font-size:14px;">653</span></p>-->
+					<script>
+						$.getJSON("http://10.201.92.169:5555/ajax", function( data ) {
+						  console.log(data);
+						  var items = [];
+						  $.each( data, function( key, val ) {
+						  //$.each( val, function( key1, val1 ) {
+						  for(i=0;i<val.length;i++){
+						  $.each( val[i], function( key1, val1 ) {
+							items.push( "<li id='" + key1 + "'>" + val1 + "</li>" );
+						  
+						  });
+						  }
+						 });
+						  $( "<ul/>", {
+							"class": "my-new-list",
+							html: items.join( "" )
+						  }).appendTo( "div.case_block1");
+						});
+					</script>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="case_block">
+					<p style="background-color:grey;color:white;text-align:center;padding:3px;font-size:12px;margin:0;">SWISS-TYPE 01</p>
+					<p style="text-align:center;font-size:12px;">PRODUCING<br>Current Part<br><br><span style="font-size:14px;">8000</span></p>
+					<p style="padding:10px 0;text-align:center;font-size:12px;background-color:green;color:white;">Production efficiency<br><br><span style="font-size:18px;">81%</span></p>
+					<p style="text-align:center;font-size:12px;">Part Count<br><br><span style="font-size:14px;">653</span></p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="case_block">
+					<p style="background-color:grey;color:white;text-align:center;padding:3px;font-size:12px;margin:0;">SWISS-TYPE 01</p>
+					<p style="text-align:center;font-size:12px;">PRODUCING<br>Current Part<br><br><span style="font-size:14px;">8000</span></p>
+					<p style="padding:10px 0;text-align:center;font-size:12px;background-color:green;color:white;">Production efficiency<br><br><span style="font-size:18px;">81%</span></p>
+					<p style="text-align:center;font-size:12px;">Part Count<br><br><span style="font-size:14px;">653</span></p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="case_block">
+					<p style="background-color:grey;color:white;text-align:center;padding:3px;font-size:12px;margin:0;">SWISS-TYPE 01</p>
+					<p style="text-align:center;font-size:12px;">PRODUCING<br>Current Part<br><br><span style="font-size:14px;">8000</span></p>
+					<p style="padding:10px 0;text-align:center;font-size:12px;background-color:green;color:white;">Production efficiency<br><br><span style="font-size:18px;">81%</span></p>
+					<p style="text-align:center;font-size:12px;">Part Count<br><br><span style="font-size:14px;">653</span></p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="case_block">
+					<p style="background-color:grey;color:white;text-align:center;padding:3px;font-size:12px;margin:0;">SWISS-TYPE 01</p>
+					<p style="text-align:center;font-size:12px;">PRODUCING<br>Current Part<br><br><span style="font-size:14px;">8000</span></p>
+					<p style="padding:10px 0;text-align:center;font-size:12px;background-color:green;color:white;">Production efficiency<br><br><span style="font-size:18px;">81%</span></p>
+					<p style="text-align:center;font-size:12px;">Part Count<br><br><span style="font-size:14px;">653</span></p>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="case_block">
+					<p style="background-color:grey;color:white;text-align:center;padding:3px;font-size:12px;margin:0;">SWISS-TYPE 01</p>
+					<p style="text-align:center;font-size:12px;">PRODUCING<br>Current Part<br><br><span style="font-size:14px;">8000</span></p>
+					<p style="padding:10px 0;text-align:center;font-size:12px;background-color:green;color:white;">Production efficiency<br><br><span style="font-size:18px;">81%</span></p>
+					<p style="text-align:center;font-size:12px;">Part Count<br><br><span style="font-size:14px;">653</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
